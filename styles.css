@@ -3,12 +3,16 @@
     box-sizing: border-box;
 }
 
-/* 2. Remove default margin */
+/* 2. Remove default margin and handle overflow */
 * {
     margin: 0;
     font-family: 'Source Sans 3', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
@@ -322,5 +326,40 @@ footer {
     .intro-features {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+/* Add responsive container */
+.container {
+    width: 100%;
+    max-width: 1074px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Improve button hover states */
+.pet-filter button {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.pet-filter button:hover {
+    color: #475AFF;
+}
+
+/* Improve accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Add focus styles for better accessibility */
+.our-btn:focus,
+.pet-filter button:focus {
+    outline: 2px solid #475AFF;
+    outline-offset: 2px;
 }
 
