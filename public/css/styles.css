@@ -1,0 +1,245 @@
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: #001D37;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.bg-primary {
+    background-color: #475AFF;
+}
+
+.bg-secondary {
+    background-color: #D660FF;
+}
+
+/* Text colors */
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-primary {
+    color: #475AFF;
+}
+
+/* Utility classes */
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.blur-\[150px\] {
+    filter: blur(150px);
+}
+
+.opacity-85 {
+    opacity: 0.85;
+}
+
+/* Positioning classes */
+.top-16 {
+    top: 4rem;
+}
+
+.right-\[-90px\] {
+    right: -90px;
+}
+
+.left-16 {
+    left: 4rem;
+}
+
+.top-\[-357px\] {
+    top: -357px;
+}
+
+.w-\[617px\] {
+    width: 617px;
+}
+
+.h-\[617px\] {
+    height: 617px;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 71px;
+    border: 2px solid #475AFF;
+    color: #FFFFFF;
+    background-color: #475AFF;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3848cc;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+}
+
+.utility-mr {
+    margin-right: 11px;
+}
+
+/* Filter button styles */
+.filter-btn {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 28px;
+    color: #9F9F9F;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.text-primary {
+    color: #475AFF;
+}
+
+/* Pet card styles */
+.pet-description {
+    margin: 0 0 1rem 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    color: #626262;
+}
+
+.pet-age {
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 150%;
+    color: #A2A2A2;
+}
+
+.pet-card {
+    display: grid;
+    grid-template-columns: 165px 1fr;
+    box-sizing: border-box;
+    border: 1px solid #F3F3F3;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pet-card-text {
+    padding: 14px 14px;
+}
+
+.pet-name-row {
+    display: flex;
+    align-items: center;
+}
+
+.pet-name {
+    margin: 0 24px 5px 0;
+    font-weight: 600;
+    font-size: 1.625rem;
+    line-height: 97.3%;
+    color: #000000;
+}
+
+.pet-card-photo {
+    order: 1;
+    grid-row: 1;
+    display: block;
+}
+
+.pet-card-photo img {
+    width: 100%;
+    display: block;
+    height: 196px;
+    object-fit: cover;
+}
+
+.list-of-pets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    column-gap: 34px;
+    row-gap: 13px;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Media queries */
+@media screen and (min-width: 600px) {
+    .pet-card-text {
+        padding: 24px 24px;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
